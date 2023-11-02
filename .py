@@ -21,9 +21,14 @@ main = tk.Tk()
 
 main.config(background=start_window_colour)
 
+
+
 exit_btn = tk.Button(background=start_button_colour,
                      foreground=start_text_colour,
-                     command=close)
+                     command=close,
+                     text="Quit")
 exit_btn.pack(pady=100)
 
+
+main.attributes('-fullscreen', True)
 mainloop()
