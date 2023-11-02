@@ -24,5 +24,6 @@ main.config(background=start_window_colour)
 exit_btn = tk.Button(background=start_button_colour,
                      foreground=start_text_colour,
                      command=close)
+exit_btn.pack(pady=100)
 
 mainloop()
