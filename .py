@@ -3,6 +3,7 @@ import time as t
 from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
+import lighting
 
 start_window_colour = "#121212"
 start_text_colour = "#FFFFFF"
@@ -15,13 +16,20 @@ def close():
     if quit_message == True:
         main.destroy()
     else:
-        pass    
+        pass
+
+def openLightstest():
+    exec(open('lighting.py').read())
 
 main = tk.Tk()
 
 main.config(background=start_window_colour)
 
-
+lightTest_btn = tk.Button(background=start_button_colour,
+                          foreground=start_text_colour,
+                          command=openLightstest,
+                          text="Lighting test")
+lightTest_btn.pack(pady=50)
 
 exit_btn = tk.Button(background=start_button_colour,
                      foreground=start_text_colour,
